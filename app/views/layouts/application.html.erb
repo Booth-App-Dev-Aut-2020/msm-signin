@@ -13,7 +13,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
-
+<nav>
+??
+<% if session[:user_id] != nil %>
+<p>
+ <a href="/user_sign_out"> Sign out</a>
+</p>
+<%end%>
+</nav>
   <body>
     <%= yield %>
   </body>
