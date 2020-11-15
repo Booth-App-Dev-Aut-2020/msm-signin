@@ -18,6 +18,13 @@
       </div>
     </div>
 
+      <div> <%if @the_bookmark != nil %>
+        <a href="/delete_bookmark/<%= @the_bookmark.id %>">
+          Un-bookmark movie
+        </a> <%end%>
+      </div>
+    </div>
+
     <dl>
       <dt>
         Title

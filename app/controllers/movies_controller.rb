@@ -14,6 +14,8 @@ class MoviesController < ApplicationController
 
     @the_movie = matching_movies.at(0)
 
+    @the_bookmark = Bookmark.where({ :movie_id => the_id, :user_id => session[:user_id] }).at(0)
+
     render({ :template => "movies/show.html.erb" })
   end
 

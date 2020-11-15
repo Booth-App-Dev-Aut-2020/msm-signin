@@ -22,7 +22,7 @@
     </select>
       <div>
 
-        <input type = "hidden" id="user_id_box" name="query_user_id" value = <%session[:user_id]%> >
+        <input type = "hidden" id="user_id_box" name="query_user_id" value = "<%=session[:user_id]%>">
       </div>
       <button>
         Bookmark this movie!
@@ -84,6 +84,12 @@
         <td>
           <a href="/bookmarks/<%= a_bookmark.id %>">
             Show details
+          </a>
+        </td>
+        
+        <td>
+          <a href="/delete_bookmark/<%= a_bookmark.id %>">
+            Un-bookmark
           </a>
         </td>
       </tr>
